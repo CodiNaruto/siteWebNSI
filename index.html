@@ -9,72 +9,76 @@
         <meta name="Keywords" content="highschool, St Laurent, ">
     </head>
     <body>
-        <!--Les cookies-->
-        <div class="cookies">
-            <p>Souhaitez-vous que vos données soient enregistrées et revendues à des personnes peu scrupuleuses ?</p>
-            <button class="cookiesbtn">Accepter</button>
-            <button class="cookiesbtn">Refuser (vous ne pouvez pas)</button>
-        </div>
+       
         <!--header-->
-        <nav>
-            <div class="text">
-                <h2>St Laurent LPND</h2>
+        <header>
+            <h1>St Laurent LPND</h1>
+            <div class="title">
+                <h2>Bienvenue sur le site du lycée St Laurent LPND</h2>
             </div>
-        </nav>
-        <div class="title">
-            <h1>Bienvenue sur le site du lycée St Laurent LPND</h1>
-        </div>
-        <section class="section1">
-            <div class="div1">
-                Bienvenue sur le site officiel de l'Ensemble Scolaire Saint Laurent La Paix Notre Dame,
-            <br>
-                Sur ce site vous pouvez accéder à différentes fonctions et aux pricipales informations du Lycée.
-            </div>
-            <br>
-            <div class="div2">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam eos odio nulla voluptate itaque eligendi fugit in necessitatibus ducimus cum placeat quidem adipisci vitae, doloribus atque deserunt et tenetur sint?
-            </div>
-            <ul>
-                <li class="boutons">
-                    <a href="http://www.maristes-stlaurent77.fr/fr/" target="_blank">Accueil</a>
-                </li>
-                <br>
-                <br>
-                <li class="boutons">
-                    Contact
-                </li>
-                <br>
-                <br>
-                <li class="boutons">
-                    Maternelle
-                </li>
-                <br>
-                <br>
-                <li class="boutons">
-                    Primaire
-                </li>
-                <br>
-                <br>
-                <li class="boutons">
-                    Collège
-                </li>
-                <br>
-                <br>
-                <li class="boutons">
-                    Lycée
-                </li>
-                <br>
-                <br>
-                <br>
-                <br>
-            </ul>
+        </header>
+        <main>
+            <section class="intro">                
+                <div class="welcome">
+                    <p>
+                        Bienvenue sur le site officiel de l'Ensemble Scolaire Saint Laurent La Paix Notre Dame.
+                    </p>
+                    <p>
+                        Sur ce site vous pouvez accéder à différentes fonctions et aux pricipales informations du Lycée.
+                    </p>                    
+                </div>
+                <menu>
+                    <h3>Visitez aussi les autres sections de notre site : </h3>
+                    <a href="http://www.maristes-stlaurent77.fr/fr/" target="_blank">
+                        <div id="site-officiel">
+                                Site officiel
+                        </div>
+                    </a>
+                    <a href="contactez-nous.html">
+                        <div id="contact">
+                            Contactez-nous
+                    </div>
+                    </a>
+                    <a>
+                    <div id="coronavirus">
+                            Coronavirus
+                    </div>
+                    </a>
+                </menu>
             </section>
-        <section>
-            
-        </section>
-        <div class="clear"></div>
 
-        <script src="app.js"></script>
+            <section id="articles">
+                <article>
+                    <h2>Premier article</h2>
+                    <p>C'est vraiment super</p>
+                    <p>Vive St Laurent</p>
+                </article>
+            </section>
+            <div class="clear"></div>
+    
+
+
+        </main>
+         <!--Les cookies-->
+         <div id="cookies">
+            <p>Souhaitez-vous que vos données soient enregistrées et revendues à des personnes peu scrupuleuses ?</p>
+            <button class="cookiesbtn" onclick="close_banner()">Accepter</button>
+            <button id="dont-close" class="cookiesbtn" onclick="dont_close()"">Refuser (vous ne pouvez pas)</button>     
+        </div>
+
+        <script type="text/javascript">
+            var banner = document.getElementById("cookies");
+            var dont_close_lookup = {"Refuser (vous ne pouvez pas)": "Essaye encore", "Essaye encore": "Nope", "Nope": "Toujours pas", "Toujours pas": "ARRETE D'APPUYER SUR CE PUTAIN DE BOUTON", "ARRETE D'APPUYER SUR CE PUTAIN DE BOUTON": "Refuser (vous ne pouvez pas)"};
+            
+            function close_banner() {
+                banner.parentNode.removeChild(banner);
+            }
+            function dont_close() {
+                var dont_close_btn = document.getElementById("dont-close")
+                dont_close_btn.firstChild.data = dont_close_lookup[dont_close_btn.firstChild.data];
+            }
+          </script>  
+       
+ 
     </body>
 </html>
