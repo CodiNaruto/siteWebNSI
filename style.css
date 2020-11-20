@@ -41,15 +41,13 @@ header h2{
     margin: 0;
 }
 
-.section1{
+.welcome{
     margin: 75px;
 }
 
-.div1{
+.texte_intro{
     font-weight: 700;
 }
-
-
 #articles {
     margin-top: 60px;
 }
