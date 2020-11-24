@@ -1,15 +1,12 @@
-<!DOCTYPE HTML> <!-- devoir de nsi | page 1 -->
-<!-- -->
+<!DOCTYPE HTML>
 <html>
     <head>
-        <title>Lycée St Laurent | Accueil</title>
         <meta charset="Utf-8">
+        <title>corona</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <meta name="Description" content="a web page about the highschool : St Laurent LPND">
-        <meta name="Keywords" content="highschool, St Laurent, ">
     </head>
-    <body>
-       
+
+    <body class="corona">
         <!--header-->
         <header>
             <a href="index.html" title="retour au menu">
@@ -17,56 +14,31 @@
             </a>
             <h1>St Laurent LPND</h1>
             <div class="title">
-                <h2>Bienvenue sur le site du lycée St Laurent LPND</h2>
+                <h2>Mesures prises par rapport au covid-19 par nos établissements</h2>
             </div>
         </header>
+        <div class="clear"></div>
         <!--header-->
+
         <!--main-->
         <main>
-            <section class="intro">                
-                <div class="welcome">
-                    <p class="texte_intro">
-                        Bienvenue sur le site officiel de l'Ensemble Scolaire Saint Laurent La Paix Notre Dame.
-                    </p>
-                    <p>
-                        Sur ce site vous pouvez accéder à différentes fonctions et aux pricipales informations du Lycée.
-                    </p>                    
-                </div>
-                <menu>
-                    <h3>Visitez aussi les autres sections de notre site : </h3>
-                    <a href="http://www.maristes-stlaurent77.fr/fr/" target="_blank">
-                        <div id="site-officiel">
-                                Site officiel
-                        </div>
-                    </a>
-                    <a href="contactez-nous.html">
-                        <div id="contact">
-                            Contactez-nous
-                    </div>
-                    </a>
-                    <a href="corona.html">
-                    <div id="coronavirus">
-                            Coronavirus
-                    </div>
-                    </a>
-                </menu>
-            </section>
+                <br>
+                <img src="img/corona.jpeg" id="imageCorona" alt="classe travaillant avec des masques">
+               <!-- TODO : implement the map element
+                   
+                <map name="mapimageCorona">
+                    <area shape="rect" coords="0, 200, "> 
+                </map>
+                <p id="infoImageCorona"><sup>Appuyez sur l'un des élèves ou sur la professeure pour obtenir des informations</sup></p>
 
-            <section id="articles">
-                <article>
-                    <h2>Premier article</h2>
-                    <p>C'est vraiment super</p>
-                    <p>Vive St Laurent</p>
-                </article>
-            </section>
-            <div class="clear"></div>
-    
+                <iframe name="iframeInfosCorona" id="iframeCorona">
 
-
+                </iframe> -->
         </main>
         <!--main-->
-         <!--Les cookies-->
-         <div id="cookies">
+
+        <!--Les cookies-->
+        <div id="cookies">
             <p>Souhaitez-vous que vos données soient enregistrées et revendues à des personnes peu scrupuleuses ?</p>
             <button class="cookiesbtn" onclick="close_banner()">Accepter</button>
             <button id="dont-close" class="cookiesbtn" onclick="dont_close()"">Refuser (vous ne pouvez pas)</button>     
@@ -92,7 +64,5 @@
                 dont_close_btn.firstChild.data = dont_close_lookup[dont_close_btn.firstChild.data];
             }
           </script>  
-       
- 
     </body>
 </html>
