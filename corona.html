@@ -4,9 +4,11 @@
         <meta charset="Utf-8">
         <title>corona</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="Description" content="a web page about the organisation with the covid-19 in St Laurent highschool">
+        <meta name="Keywords" content="highschool, St Laurent, corona">
     </head>
 
-    <body class="corona">
+    <body id="corona">
         <!--header-->
         <header>
             <a href="index.html" title="retour au menu">
@@ -23,17 +25,17 @@
         <!--main-->
         <main>
                 <br>
-                <img src="img/corona.jpeg" id="imageCorona" alt="classe travaillant avec des masques">
-               <!-- TODO : implement the map element
+                <img src="img/corona.jpeg" id="imageCorona" alt="classe travaillant avec des masques" usemap="mapimageCorona">
                    
-                <map name="mapimageCorona">
-                    <area shape="rect" coords="0, 200, "> 
+                <map name="mapimageCorona"> <!-- la page sera affichée dans l'iframe juste en dessous-->
+                    <area shape="poly" coords="0,200,45,217,66,233,77,264,84,283,96,312,85,340,69,358,47,356,39,394,63,414,138,440,180,458,172,480,0,480" alt="student1" title="infos gestion corona" target="iframeInfosCorona" href=""> <!--coordonnées de l'élève sur la gauche-->
+                    <area shape="rect" coords="0, 200, 100, 480 " alt="student1" title="infos gestion corona" target="iframeInfosCorona" href="">
                 </map>
                 <p id="infoImageCorona"><sup>Appuyez sur l'un des élèves ou sur la professeure pour obtenir des informations</sup></p>
 
                 <iframe name="iframeInfosCorona" id="iframeCorona">
 
-                </iframe> -->
+                </iframe>
         </main>
         <!--main-->
 
@@ -50,14 +52,17 @@
             
             function close_banner() {
                 let elem=document.getElementById("cookies"); //on récupère l'élément cookies
-                let TURNS=0xF; //le nombre de tour (qui correspond aussi à la valeur de 0xF)
+                let TURNS=0x8; //le nombre de tour
                 for(let i=0; i<=TURNS; i++){ //on va itérer 0xF fois
                     setTimeout(function(){
                         elem.style.backgroundColor= "#000000"+ ((15-i+(15-i)*16).toString(16)).toUpperCase(); //le but va etre de changer la couleur de l'élément en  #000000 (la couleur noir) auquel on ajoute à la fin une valeur en hexadécimal (de deux chiffres encore une fois) qui correspondra à l'alpha.
                     }, 
                     100*(i+1)); //cette update se fera toutes les 100 millisecondes
                 }
-                setTimeout(function(){banner.parentNode.removeChild(banner)}, 100*(TURNS+1)); //après avoir fait un joli un changement de transparence, on enlève l'élément quand même
+                setTimeout(function(){
+                    banner.parentNode.removeChild(banner)
+                }, 100*(TURNS+1)
+                ); //après avoir fait un joli un changement de transparence, on enlève l'élément quand même
             }
             function dont_close() {
                 var dont_close_btn = document.getElementById("dont-close")

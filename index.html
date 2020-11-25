@@ -23,28 +23,29 @@
         <!--header-->
         <!--main-->
         <main>
+            <hr>
             <section class="intro">                
                 <div class="welcome">
                     <p class="texte_intro">
-                        Bienvenue sur le site officiel de l'Ensemble Scolaire Saint Laurent La Paix Notre Dame.
+                        Bienvenue sur le site presque officiel de l'Ensemble Scolaire Saint Laurent La Paix Notre Dame.
                     </p>
                     <p>
                         Sur ce site vous pouvez accéder à différentes fonctions et aux pricipales informations du Lycée.
                     </p>                    
                 </div>
                 <menu>
-                    <h3>Visitez aussi les autres sections de notre site : </h3>
-                    <a href="http://www.maristes-stlaurent77.fr/fr/" target="_blank">
+                   <!-- do we need this ? <h3>Visitez aussi les autres sections de notre site : </h3> -->
+                    <a href="http://www.maristes-stlaurent77.fr/fr/" target="_blank" title="site officiel de St Laurent">
                         <div id="site-officiel">
                                 Site officiel
                         </div>
                     </a>
-                    <a href="contactez-nous.html">
+                    <a href="contactez-nous.html" title="comment nous contacter">
                         <div id="contact">
                             Contactez-nous
                     </div>
                     </a>
-                    <a href="corona.html">
+                    <a href="corona.html" title="les mesures prises contre la covid-19">
                     <div id="coronavirus">
                             Coronavirus
                     </div>
@@ -54,9 +55,8 @@
 
             <section id="articles">
                 <article>
-                    <h2>Premier article</h2>
-                    <p>C'est vraiment super</p>
-                    <p>Vive St Laurent</p>
+                    <h2>Qui sommes nous ?</h2>
+                    <p>Nous sommes un établissement scolaire mariste. C'est à dire </p>
                 </article>
             </section>
             <div class="clear"></div>
@@ -65,6 +65,22 @@
 
         </main>
         <!--main-->
+
+        <!--bas-->
+        <footer>
+            <div class="infos">
+                <p>Nous contacter : <a href="contactez-nous.html">corona.html</a></p>
+                <p>email : <a href="mailto: st.laurent.direction@wanadoo.fr">st.laurent.direction@wanadoo.fr</a></p>
+                <p>adresse : 43 Rue Alfred Brébion, 77400 Lagny-sur-Marne <a href="contactez-nous.html">(voir ici pour plus de détails)</a> </p>
+                <p>téléphone : 01 64 12 47 00 </p>
+                <br>
+                <img src="img/directrice.jpg" alt="photo de la directrice" id="directrice">
+                <h3>Mme Grandgirard</h3>
+                <p>directrice du lycée St Laurent LPND</p>
+            </div>
+        </footer>
+        <!--bas-->
+
          <!--Les cookies-->
          <div id="cookies">
             <p>Souhaitez-vous que vos données soient enregistrées et revendues à des personnes peu scrupuleuses ?</p>
@@ -75,17 +91,20 @@
         <script type="text/javascript">
             var banner = document.getElementById("cookies");
             var dont_close_lookup = {"Refuser (vous ne pouvez pas)": "Essaye encore", "Essaye encore": "Nope", "Nope": "Toujours pas", "Toujours pas": "ARRETE D'APPUYER SUR CE PUTAIN DE BOUTON", "ARRETE D'APPUYER SUR CE PUTAIN DE BOUTON": "Refuser (vous ne pouvez pas)"};
-            
+
             function close_banner() {
                 let elem=document.getElementById("cookies"); //on récupère l'élément cookies
-                let TURNS=0xF; //le nombre de tour (qui correspond aussi à la valeur de 0xF)
+                let TURNS=0x8; //le nombre de tour
                 for(let i=0; i<=TURNS; i++){ //on va itérer 0xF fois
                     setTimeout(function(){
                         elem.style.backgroundColor= "#000000"+ ((15-i+(15-i)*16).toString(16)).toUpperCase(); //le but va etre de changer la couleur de l'élément en  #000000 (la couleur noir) auquel on ajoute à la fin une valeur en hexadécimal (de deux chiffres encore une fois) qui correspondra à l'alpha.
                     }, 
                     100*(i+1)); //cette update se fera toutes les 100 millisecondes
                 }
-                setTimeout(function(){banner.parentNode.removeChild(banner)}, 100*(TURNS+1)); //après avoir fait un joli un changement de transparence, on enlève l'élément quand même
+                setTimeout(function(){
+                    banner.parentNode.removeChild(banner)
+                }, 100*(TURNS+1)
+                ); //après avoir fait un joli un changement de transparence, on enlève l'élément quand même
             }
             function dont_close() {
                 var dont_close_btn = document.getElementById("dont-close")
