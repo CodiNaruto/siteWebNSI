@@ -6,17 +6,71 @@
     <meta name="Description" content="how to contact us at St Laurent LPND">
     <meta name="Keywords" content="highschool, St Laurent, ">
 </head>
-<body id="contactez_nous">
-    <nav>
-        <div class="text">
-            <h2>St Laurent LPND</h2>
-        </div>
-    </nav>
+
+<body>
+    <header>
+    <a href="index.html" title="retour au menu">
+        <img src="img/logoMariste.png" alt="logo mariste">
+    </a>
+    <h1>St Laurent LPND</h1>
     <div class="title">
-        <h1>Bienvenue sur le site du lycée St Laurent LPND</h1>
+        <h2>Bienvenue sur le site du lycée St Laurent LPND</h2>
     </div>
-    <br>
-    <br>
-    <img src="img/Contactez-nous.png" id="contactImage">
-    <br>
+    <!--</header>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+    <script type="text/javascript">
+        let map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+          });
+        }
+        </script>
+    <div id="map"></div>-->
+    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+		<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+        var setting = {"height":700,"width":1920,"zoom":16,"queryString":"Lycée Saint-Laurent La Paix Notre Dame, Rue Alfred Brébion, Lagny-sur-Marne, France","place_id":"ChIJUTheYGsb5kcRYHKMP26kEPU","satellite":true,"centerCoord":[48.87256439728408,2.7099470932192915],"cid":"0xf510a46e3f8c7260","lang":"fr","cityUrl":"/france/serris-12827","cityAnchorText":"Carte de Serris, Ile de France, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"314493"};
+        var d = document;
+        var s = d.createElement('script');
+        s.src = 'https://1map.com/js/script-for-user.js?embed_id=314493';
+        s.async = true;
+        s.onload = function (e) {
+          window.OneMap.initMap(setting)
+        };
+        var to = d.getElementsByTagName('script')[0];
+        to.parentNode.insertBefore(s, to);
+      })();</script><a href="https://1map.com/fr/map-embed">1 Map</a></div>
+    
+        <!--Les cookies-->
+        <div id="cookies">
+            <p>Souhaitez-vous que vos données soient enregistrées et revendues à des personnes peu scrupuleuses ?</p>
+            <button class="cookiesbtn" onclick="close_banner()">Accepter</button>
+            <button id="dont-close" class="cookiesbtn" onclick="dont_close()"">Refuser (vous ne pouvez pas)</button>     
+        </div>
+
+        <script type="text/javascript">
+            var banner = document.getElementById("cookies");
+            var dont_close_lookup = {"Refuser (vous ne pouvez pas)": "Essaye encore", "Essaye encore": "Nope", "Nope": "Toujours pas", "Toujours pas": "ARRETE D'APPUYER SUR CE PUTAIN DE BOUTON", "ARRETE D'APPUYER SUR CE PUTAIN DE BOUTON": "Refuser (vous ne pouvez pas)"};
+            
+            function close_banner() {
+                let elem=document.getElementById("cookies"); //on récupère l'élément cookies
+                let TURNS=0x8; //le nombre de tour
+                for(let i=0; i<=TURNS; i++){ //on va itérer 0xF fois
+                    setTimeout(function(){
+                        elem.style.backgroundColor= "#000000"+ ((15-i+(15-i)*16).toString(16)).toUpperCase(); //le but va etre de changer la couleur de l'élément en  #000000 (la couleur noir) auquel on ajoute à la fin une valeur en hexadécimal (de deux chiffres encore une fois) qui correspondra à l'alpha.
+                    }, 
+                    100*(i+1)); //cette update se fera toutes les 100 millisecondes
+                }
+                setTimeout(function(){
+                    banner.parentNode.removeChild(banner)
+                }, 100*(TURNS+1)
+                ); //après avoir fait un joli un changement de transparence, on enlève l'élément quand même
+            }
+            function dont_close() {
+                var dont_close_btn = document.getElementById("dont-close")
+                dont_close_btn.firstChild.data = dont_close_lookup[dont_close_btn.firstChild.data];
+            }
+          </script>  
 </body>
