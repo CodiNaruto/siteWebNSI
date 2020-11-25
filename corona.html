@@ -24,20 +24,78 @@
 
         <!--main-->
         <main>
+                <hr>
                 <br>
-                <img src="img/corona.jpeg" id="imageCorona" alt="classe travaillant avec des masques" usemap="mapimageCorona">
-                   
-                <map name="mapimageCorona"> <!-- la page sera affichée dans l'iframe juste en dessous-->
-                    <area shape="poly" coords="0,200,45,217,66,233,77,264,84,283,96,312,85,340,69,358,47,356,39,394,63,414,138,440,180,458,172,480,0,480" alt="student1" title="infos gestion corona" target="iframeInfosCorona" href=""> <!--coordonnées de l'élève sur la gauche-->
-                    <area shape="rect" coords="0, 200, 100, 480 " alt="student1" title="infos gestion corona" target="iframeInfosCorona" href="">
-                </map>
-                <p id="infoImageCorona"><sup>Appuyez sur l'un des élèves ou sur la professeure pour obtenir des informations</sup></p>
+                <img src="img/corona.jpeg" id="imageCorona" alt="classe travaillant avec des masques" >
+                <hr>
+                <article id="article">
+                    <p>
+                        Il ne vous aura sans aucuns doutes échappé qu'au vue de la situation sanitaire actuelle à cause de la covid-19, des mesures spéciales s'imposent.
+                        A St Laurent, la santé de nos élèves et de notre personnel nous importe beaucoup et c'est pourquoi nous faisons notre possible pour empecher la propagation du coronavirus.
+                        <br>Parmi ces mesures, on pourra entre autres compter : 
+                        <ul>
+                            <li>un escalier réservé pour monter aux étages et un autre spécialement pour descendre</li>
+                            <li>des dessins sur le sol pour connaitre les distances de sécurité</li>
+                            <li>des récréations qui se font à des endroits différents pour limiter les contacts</li>
+                            <li>la possibilité de suivre les cours en visioconférence via des Ipads lorsqu'on est cas covid</li>
+                        </ul>
+                        Car même si nous sommes une école, la santé passe avant les études.
 
-                <iframe name="iframeInfosCorona" id="iframeCorona">
-
-                </iframe>
+                    </p>
+            </article>
         </main>
         <!--main-->
+
+        <!--iframe-->
+        <hr>
+        <h1 id="seFaireDepister">Voici une liste des endroits pour se faire dépister du coronavirus : </h1>
+        <br><br>
+
+        <iframe id="iframeCorona" src="https://sante.fr/covid19/external/depistage?referer=SiteDeReference&region=RegionSansEspace" title="Lieux de dépistage">
+        </iframe>
+        <!--iframe-->
+
+        <br><hr><br>
+        <div class="greyband"></div>
+        <!--footer-->
+        <footer>
+            <div class="infos">
+                <img src="img/siteContact.png" alt="photo internet reseau">
+                <p>Nous contacter : <a href="contactez-nous.html" title="comment nous contacter">corona.html</a></p>
+                <div class="clear"></div>
+                
+                <img src="img/mail.png" alt="photo mail">
+                <p>email : <a href="mailto: st.laurent.direction@wanadoo.fr" title="lien vers notre adresse email">st.laurent.direction@wanadoo.fr</a></p>
+                <div class="clear"></div>
+
+                <img src="img/adresse.png" alt="photo location">
+                <p>adresse : 43 Rue Alfred Brébion, 77400 Lagny-sur-Marne <a href="contactez-nous.html" title="comment nous contacter">(voir ici pour plus de détails)</a> </p>
+                <div class="clear"></div>
+
+                <img src="img/telephone.png" alt="photo telephone">
+                <p>téléphone : 01 64 12 47 00 </p>
+                <div class="clear"></div>
+
+                <br>
+                <div class="presentation-directrice">
+                    <img src="img/directrice.jpg" alt="photo de la directrice" id="directrice">
+                    <div class="texteDescription">
+                        <h2>Mme Grandgirard</h2>
+                        <h3>directrice du lycée St Laurent LPND</h3>
+                        <p id="description">Présente depuis le 1<sup>er</sup> septembre 2015,
+                        Mme Grandgirard a d'abord été directrice du lycée Bossuet <br>
+                        à Meaux depuis 2007 (lycée Bossuet dont voici le site : <a href="http://www.lyceebossuet-meaux.fr/" title="lien vers le site du lycée Bossuet">http://www.lyceebossuet-meaux.fr/</a>).
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+            <pre id="copyright">
+                Copyright :  Un site web réalisé par CIROTTEAU Victor et LAHURTE Matthieu du lycée St Laurent LPND (si vous n'aviez pas deviné) en spécialité NSI
+            </pre>
+        </footer>
+        <!--footer-->
 
         <!--Les cookies-->
         <div id="cookies">
